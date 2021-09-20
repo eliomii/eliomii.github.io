@@ -1,0 +1,223 @@
+:root {
+    --dark: #545e51;
+    --light: #ffffff;
+    --primary: #c2e49c;
+    --displacement: 330%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--light);
+    font-family: 'Oswald', sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    top:0;
+    left:0;
+    padding: 10vh 0;
+    position: relative;
+    color: var(--dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+p {
+    margin: 0;
+}
+
+ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    border-width: 0.1px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+
+}
+
+img, svg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: var(--light);
+    background: black;
+}
+
+::selection {
+    color: var(--light);
+    background: black;
+}
+
+.circle {
+    border-radius: 100%;
+}
+
+#pfp {
+    width: 21vw;
+    height: 21vw;
+    position: relative;
+    min-width: 500px;
+    min-height: 500px;
+    margin: 2.5vh 0;
+}
+
+#pfp-border {
+    width: 100%;
+    height: 100%;
+    border: var(--dark) 2px solid;
+    position: relative;
+}
+
+#pfp-img {
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top: 5.5%;
+    left: 5.5%;
+}
+
+#name {
+    background: var(--dark);
+    padding: 0.6rem 4rem;
+    font-size: 2rem;
+    color: var(--light);
+    letter-spacing: 0.2rem;
+    text-align: center;
+    position: absolute;
+    bottom: 13%;
+    right: -10%;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15vw;
+    min-width: 200px;
+    overflow: visible;
+    margin: 2.5vh 0;
+}
+
+.menu-item {
+    width: 100%;
+    height: 3.5rem;
+    position: relative;
+    background: var(--dark);
+    margin: 0.5rem;
+
+    border: 2px solid var(--light);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    color: var(--light);
+
+    font-size: 1.2rem;
+}
+
+.menu-item svg {
+    width: 35%;
+    height: 60%;
+}
+
+.menu-item p {
+    margin: 0 0 0 10%;
+}
+
+.menu-item:hover {
+    animation: wobble 0.4s ease-out 0s forwards;
+}
+
+@keyframes wobble {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg); 
+    }
+    25% {
+        -webkit-transform: rotate(5deg);
+        -moz-transform: rotate(5deg);
+        -ms-transform: rotate(5deg);
+        -o-transform: rotate(5deg);
+        transform: rotate(5deg);
+    }
+    75% {
+        -webkit-transform: rotate(-5deg);
+        -moz-transform: rotate(-5deg);
+        -ms-transform: rotate(-5deg);
+        -o-transform: rotate(-5deg);
+        transform: rotate(-5deg);
+    }
+    100% {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    #pfp {
+        width: 50vw;
+        height: 50vw;
+        position: relative;
+        min-width: inherit;
+        min-height: inherit;
+        margin: 5vh 0;
+    }
+    
+    #name {
+        background: var(--dark);
+        padding: 0.6rem 4rem;
+        font-size: 3rem;
+        color: var(--light);
+        letter-spacing: 0.5rem;
+        text-align: center;
+        position: absolute;
+        bottom: 13%;
+        right: -10%;
+    }
+
+    #menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50vw;
+        min-width: 200px;
+        overflow: visible;
+    }
+
+    .menu-item {
+        width: 100%;
+        height: 5rem;
+        position: relative;
+        background: var(--dark);
+        margin: 0.5rem;
+    
+        border: 2px solid var(--light);
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        color: var(--light);
+        transition: linear 0.4s;
+    
+        font-size: 2rem;
+    }
+}
